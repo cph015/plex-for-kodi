@@ -304,6 +304,7 @@ class SeekDialog(kodigui.BaseDialog):
                 elif action in (xbmcgui.ACTION_MOVE_LEFT, xbmcgui.ACTION_BIG_STEP_BACK):
                     return self.updateBigSeek(changed=True)
                 elif action == xbmcgui.ACTION_MOVE_UP and self.getProperty('show.introSkip'):
+					self.setProperty('show.introSkip', '')
                     self.setFocusId(self.SKIP_INTRO_BUTTON_ID)
                     return
 
